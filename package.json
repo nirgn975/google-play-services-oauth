@@ -37,6 +37,7 @@
   ],
   "homepage": "https://github.com/nirgn975/google-play-services-oauth#readme",
   "devDependencies": {
+    "@types/crypto-js": "^4.0.1",
     "@types/jest": "^26.0.14",
     "jest": "^26.2.2",
     "prettier": "^2.0.5",

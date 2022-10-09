@@ -18,12 +18,31 @@ npm install --save-dev google-play-services-oauth
 
 ```typescript
 import * from google-play-services-oauth
+
+var GoogleOauth = require("../oauth");
+
+var EMAIL = 'your_google_email';
+var PASSWORD = 'your_email_password';
+var ANDROID_ID = 'your_android_id'
+var SERVICE = 'your_service'
+var APP = 'your_android'
+var CLIENT_SIG = 'your_client_sig'
+
+var google = new GoogleOauth();
+google.login(EMAIL, PASSWORD, ANDROID_ID, function (err, data) {
+    if (data) {
+        google.oauth(EMAIL, data.masterToken, data.androidId, SERVICE, APP, CLIENT_SIG, function (err, data) {
+            console.log(data);
+        });
+    }
+});
 ```
 
 ## Want to help?
 
-Great! Here is how you can install the local generator to test changes.
+Great! Here is how you can install the project on your local machine.
 
-  1. Git clone your fork locally.
-  2. `npm install` inside the new directory.
-  3. Start coding!
+1. Git clone your fork locally.
+2. `npm install` inside the new directory.
+3. Start coding..
+4. Make a Pull Request!
